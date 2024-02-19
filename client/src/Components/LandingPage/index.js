@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
 import './index.css'
 import bannerImage from '../../Assets/banner-image2.png'
-import bannerImage2 from '../../Assets/banner-image3.png'
-import bannerImage3 from '../../Assets/banner-image4.png'
 import { BannerSectionImageContainer, BannerSectionTextContainer, CTAButton, Container, Description2, Form, FormField, H1, Header, Section, ServiceCard, ServiceCardContainer, SubmitButton } from '../Styles/StyledComponents';
 import Footer from '../Footer';
 
@@ -13,7 +10,6 @@ import Footer from '../Footer';
 
 
 const LandingPage = () => {
-    const [showPopup, setShowPopup] = useState(false);
 
     const navigate = useNavigate();
 
@@ -34,19 +30,7 @@ const LandingPage = () => {
         rootMargin: '-1px 0px',
     });
 
-    useEffect(() => {
-        // Set a timer to show the popup after 5 seconds
-        const timerId = setTimeout(() => {
-            setShowPopup(true);
-        }, 5000);
 
-        // Clear the timer if the component unmounts
-        return () => clearTimeout(timerId);
-    }, []); // Empty dependency array ensures the effect runs only once
-
-    const closePopup = () => {
-        setShowPopup(false);
-    };
 
 
     const whyChooseUsFeatures = [
@@ -228,34 +212,7 @@ const LandingPage = () => {
         },
     ];
 
-    const sliderImages = [
-        {
-            src: bannerImage,
-            alt: 'Image1',
-        },
-        {
-            src: bannerImage2,
-            alt: 'Image2',
-        },
-        {
-            src: bannerImage3,
-            alt: 'Image3',
-        }
-    ];
 
-
-    const sliderSettings = {
-        dots: false,
-        infinite: true,
-        prevArrow: null,
-        nextArrow: null,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-
-    };
 
     return (
         <Container>
