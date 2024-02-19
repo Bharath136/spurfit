@@ -70,10 +70,10 @@ const Navbar = () => {
                         Contact Us
                     </ScrollLink>
                 </NavItem>
-                <NavItem style={{backgroundColor:'white', padding:'10px 20px'}}>
+          <NavItem style={{ backgroundColor: 'white', padding: '10px 20px', borderRadius: '30px' }}>
                     <Link
                         to="/"
-                        style={{textDecoration:'none', color:'#000'}}
+                        style={{textDecoration:'none', color:'#000', }}
                     >
                         Login
                     </Link>
