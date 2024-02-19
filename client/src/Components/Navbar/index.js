@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { Link as ScrollLink } from 'react-scroll';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const fadeIn = keyframes`
   from {
@@ -12,22 +12,10 @@ const fadeIn = keyframes`
   }
 `;
 
-const scrollToSection = (targetId) => {
-    const targetElement = document.getElementById(targetId);
-
-    if (targetElement) {
-        targetElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-            inline: 'nearest',
-        });
-    }
-};
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    const navigate = useNavigate()
 
     const toggleNavbar = () => {
         setIsOpen(!isOpen);
