@@ -81,7 +81,7 @@
 
 
 .infinite-animation-text {
-    animation: slideInFromLeft 4s ease-in-out infinite;
+    animation: slideInFromLeft 4s ease-in-out ;
     animation-fill-mode: forwards
 }
 
